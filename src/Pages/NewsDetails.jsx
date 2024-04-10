@@ -1,9 +1,23 @@
+import Header from "./Shared/Header";
+import Navbar from "./Shared/Navbar";
+import RightSideNav from "./Shared/RightSideNav";
+import {useParams} from 'react-router-dom'
 
 
 const NewsDetails = () => {
+    const {id} = useParams()
     return (
         <div>
-            <h2>News details</h2>
+            <Header></Header>
+            <Navbar></Navbar>
+            <div className="grid md:grid-cols-4">
+                <div className="col-span-3">
+                    <h2 className="text-5xl">{id}</h2>
+                </div>
+                <div>
+                    <RightSideNav></RightSideNav>
+                </div>
+            </div>
         </div>
     );
 };
