@@ -15,7 +15,7 @@ const LeftSideNav = () => {
             <div className="space-y-6">
                 {
                     categories.map(category => <Link 
-                        className="block ml-4 text-xl font-semibold px-4" 
+                        className="block ml-4 text-xl font-semibold px-4 hover:text-2xl hover:font-extrabold" 
                         key={category.id}
                         to={`/category/${category.id}`}
                         >{category.name}</Link>)
